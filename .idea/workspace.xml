@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ed3c3c-3d6b-4d3b-9cc8-b09dc5c6b609" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\norman.hilbert\Documents\MindfulnessBell\.classpath" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\norman.hilbert\Documents\MindfulnessBell\.project" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\norman.hilbert\Documents\MindfulnessBell\.settings\org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="04ed3c3c-3d6b-4d3b-9cc8-b09dc5c6b609" name="Default" comment="" />
     <ignored path="MindfulnessBell.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
