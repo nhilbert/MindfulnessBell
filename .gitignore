@@ -3,3 +3,4 @@ target/
 .idea/libraries/Maven__aopalliance_aopalliance_1_0.xml
 .idea/libraries/
 .idea/workspace.xml
+.idea/uiDesigner.xml
