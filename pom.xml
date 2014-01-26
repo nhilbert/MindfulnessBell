@@ -51,11 +51,10 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>C:\Users\norman.hilbert\Documents\MindfulnessBell\src\main\java</sourceDirectory>
-        <scriptSourceDirectory>C:\Users\norman.hilbert\Documents\MindfulnessBell\src\main\scripts</scriptSourceDirectory>
-        <testSourceDirectory>C:\Users\norman.hilbert\Documents\MindfulnessBell\src\test\java</testSourceDirectory>
-        <outputDirectory>C:\Users\norman.hilbert\Documents\MindfulnessBell\target\classes</outputDirectory>
-        <testOutputDirectory>C:\Users\norman.hilbert\Documents\MindfulnessBell\target\test-classes</testOutputDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <outputDirectory>target/classes</outputDirectory>
+        <testOutputDirectory>target/test-classes</testOutputDirectory>
 
         <resources>
             <resource>
