@@ -8,7 +8,7 @@ import java.util.TimerTask;
  */
 public class BellTimerImpl extends Timer implements BellTimer{
     @Override
-    public void schedule(TimerTask task, long delay, long period, long randomOffset) {
-        this.schedule(task, delay, period);
+    public void schedule(TimerTask task, long period, long randomOffset) {
+        super.schedule(task, period, period);
     }
 }

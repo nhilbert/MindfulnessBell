@@ -10,6 +10,6 @@ import java.util.TimerTask;
  * the timer with a random +/- time interval
  */
 public interface BellTimer {
-    void schedule(TimerTask task, long delay, long period, long randomOffset);
+    void schedule(TimerTask task, long period, long randomOffset);
     void cancel();
 }

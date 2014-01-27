@@ -47,7 +47,7 @@ public class BasicBellMasterImpl implements BellMaster {
             public void run() {
                 ring();
             }
-        },0 , mySettings.getPeriod(), 0);
+        }, mySettings.getPeriod(), 0);
     }
 
     @Override
