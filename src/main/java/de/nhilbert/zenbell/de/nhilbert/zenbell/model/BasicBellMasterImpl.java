@@ -14,7 +14,7 @@ public class BasicBellMasterImpl implements BellMaster {
 
     private Collection<Ringable> myBells;
 
-    public BasicBellMasterImpl(BellTimer myTimer, Settings mySettings, Collection<Ringable> myBells) {
+    public BasicBellMasterImpl(BellTimer myTimer, Settings mySettings) {
         this.myTimer = myTimer;
         this.mySettings = mySettings;
         this.myBells = myBells;
