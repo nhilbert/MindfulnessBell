@@ -11,4 +11,5 @@ import java.util.TimerTask;
  */
 public interface BellTimer {
     void schedule(TimerTask task, long delay, long period, long randomOffset);
+    void cancel();
 }

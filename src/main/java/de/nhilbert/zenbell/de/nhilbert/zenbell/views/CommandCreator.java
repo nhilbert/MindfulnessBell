@@ -1,7 +1,10 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
-/**
+import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
+
+/*
  * Created by norman.hilbert on 27.01.14.
  */
 public interface CommandCreator {
+    void setManager(CommandManager cm);
 }

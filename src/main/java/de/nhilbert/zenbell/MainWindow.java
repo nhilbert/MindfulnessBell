@@ -52,7 +52,7 @@ public class MainWindow extends JFrame implements MouseListener, WindowStateList
 	/**
 	 * The public constructor
 	 * @param title Title of the window
-	 * @param master A bell Master
+	 * @param sm A bell Master
 	 */
 	public MainWindow(String title, SettingsManager sm){
 		super(title);
@@ -94,7 +94,7 @@ public class MainWindow extends JFrame implements MouseListener, WindowStateList
             defaultItem.addActionListener(exitListener);
             popup.add(defaultItem);
             
-            defaultItem=new MenuItem("Öffnen");
+            defaultItem=new MenuItem("ï¿½ffnen");
             defaultItem.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     setVisible(true);

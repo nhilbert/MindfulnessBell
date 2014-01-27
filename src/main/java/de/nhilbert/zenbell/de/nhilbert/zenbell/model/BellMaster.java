@@ -6,5 +6,9 @@ package de.nhilbert.zenbell.de.nhilbert.zenbell.model;
  * This is an Interface to a BellMaster
  */
 public interface BellMaster {
-    T
+    void registerBell(Ringable bell);
+    void reset();
+    void ring();
+    void start();
+    void stop();
 }
