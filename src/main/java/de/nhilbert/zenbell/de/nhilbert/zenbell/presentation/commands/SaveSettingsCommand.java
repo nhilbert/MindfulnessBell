@@ -10,13 +10,13 @@ public class SaveSettingsCommand implements Command {
 
     private CommandManager cm;
 
-    public SaveSettingsCommand(CommandManager cm) {
-        this.cm=cm;
+    public SaveSettingsCommand() {
+
     }
 
     @Override
     public boolean execute() {
-        cm.saveSettings();
+
         return true;
     }
 }

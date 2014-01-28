@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * Created by norman.hilbert on 27.01.14.
  */
-public class MainPresenterImpl implements MainPresenter, CommandManager{
+public class MainPresenterImpl implements MainPresenter{
 
     Collection<View> ViewList;
     BellMaster myBellMaster;
@@ -17,11 +17,6 @@ public class MainPresenterImpl implements MainPresenter, CommandManager{
 
 
 
-    //add a Command to the queue
-    @Override
-    public void add(Command c) {
-        c.execute(); //execute command right away :-)
-    }
 
     @Override
     public Object getProperty(int PropertyID) {
@@ -70,6 +65,25 @@ public class MainPresenterImpl implements MainPresenter, CommandManager{
         myBellMaster.ring();
     }
 
+    @Override
+    public void close() {
+
+    }
+
+    @Override
+    public void changeBackground() {
+
+    }
+
+    @Override
+    public void showInfo() {
+
+    }
+
+    @Override
+    public void showSettings() {
+
+    }
 
 
 }

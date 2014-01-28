@@ -12,4 +12,5 @@ public interface SettingsPresenter {
     void registerView(View v);
     void load();
     void save();
+    void saveSettings();
 }

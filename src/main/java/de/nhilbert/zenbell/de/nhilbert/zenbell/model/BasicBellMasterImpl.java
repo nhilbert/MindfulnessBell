@@ -1,8 +1,6 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.model;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.TimerTask;
+import java.util.*;
 
 /**
  * Created by norman.hilbert on 27.01.14.
@@ -11,15 +9,16 @@ import java.util.TimerTask;
  */
 public class BasicBellMasterImpl implements BellMaster {
 
-    private BellTimer myTimer;
+    private Timer myTimer;
     private Settings mySettings;
+    private Integer period;
 
     private Collection<Ringable> myBells;
 
-    public BasicBellMasterImpl(BellTimer myTimer, Settings mySettings) {
-        this.myTimer = myTimer;
+    public BasicBellMasterImpl(Settings mySettings) {
+        this.myTimer = new Timer();
         this.mySettings = mySettings;
-        this.myBells = myBells;
+        this.myBells = new LinkedList<Ringable>();
     }
 
     @Override
@@ -49,11 +48,12 @@ public class BasicBellMasterImpl implements BellMaster {
             public void run() {
                 ring();
             }
-        }, mySettings.getPeriod(), 0);
+        }, 0, mySettings.getPeriod());
     }
 
     @Override
     public void stop() {
         myTimer.cancel();
     }
+
 }

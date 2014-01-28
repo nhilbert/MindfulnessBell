@@ -1,5 +1,6 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.commands;
 
+import de.nhilbert.zenbell.de.nhilbert.zenbell.model.BellMaster;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.Command;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
 
@@ -9,17 +10,17 @@ import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
  */
 public class RingBellCommand implements Command {
 
-    CommandManager cm;
+    BellMaster bm;
 
     //This needs a MainPresenterImpl in order to ring the bell.
-    public RingBellCommand(CommandManager cm) {
-        this.cm=cm;
+    public RingBellCommand(BellMaster bm) {
+        this.bm=bm;
     }
 
 
     @Override
     public boolean execute() {
-        cm.ring();
+        bm.ring();
         return true;
     }
 }

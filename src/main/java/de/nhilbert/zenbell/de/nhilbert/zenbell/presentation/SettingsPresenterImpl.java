@@ -6,7 +6,7 @@ import de.nhilbert.zenbell.de.nhilbert.zenbell.views.View;
 /**
  * Created by norman.hilbert on 27.01.14.
  */
-public class SettingsPresenterImpl implements CommandManager, SettingsPresenter {
+public class SettingsPresenterImpl implements SettingsPresenter {
 
     private String backgroundImage;
     private Boolean notificationEnabled;
@@ -17,16 +17,6 @@ public class SettingsPresenterImpl implements CommandManager, SettingsPresenter 
     Settings mySettings;
 
 
-    @Override
-    public void add(Command c) {
-        c.execute();
-
-    }
-
-    @Override
-    public void ring() {
-        //nothing happening here
-    }
 
     @Override
     public void saveSettings() {
