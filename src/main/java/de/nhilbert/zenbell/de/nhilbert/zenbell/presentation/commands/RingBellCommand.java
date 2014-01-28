@@ -11,7 +11,7 @@ public class RingBellCommand implements Command {
 
     CommandManager cm;
 
-    //This needs a MainPresenter in order to ring the bell.
+    //This needs a MainPresenterImpl in order to ring the bell.
     public RingBellCommand(CommandManager cm) {
         this.cm=cm;
     }

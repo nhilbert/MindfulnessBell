@@ -13,11 +13,4 @@ public interface CommandManager {
      */
     void add(Command c);
 
-    //Ring the bell
-    void ring();
-
-    //Save Settings
-    void saveSettings();
-
-
 }

@@ -14,5 +14,4 @@ public interface View {
     void showView();
     void hideView();
     void updateView();
-    void addCommandManager(CommandManager cm);
 }

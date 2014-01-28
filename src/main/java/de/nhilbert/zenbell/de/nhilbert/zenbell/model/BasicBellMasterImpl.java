@@ -6,6 +6,8 @@ import java.util.TimerTask;
 
 /**
  * Created by norman.hilbert on 27.01.14.
+ *
+ * This is an Implementation of the BellMaster
  */
 public class BasicBellMasterImpl implements BellMaster {
 

@@ -1,6 +1,7 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
+import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.commands.QuitCommand;
 
 import java.awt.event.WindowEvent;
@@ -10,18 +11,14 @@ import java.awt.event.WindowListener;
  * Created by norman.hilbert on 27.01.14.
  * This class listens to the actions in the main window and creates commands for the presentation layer.
  */
-public class MainWindowListener implements WindowListener, CommandCreator {
+public class MainWindowListener implements WindowListener {
 
-    private CommandManager cm;
+    private MainPresenter presenter;
 
-    public MainWindowListener(CommandManager cm) {
-        this.cm = cm;
+    public MainWindowListener(MainPresenter presenter) {
+        this.presenter = presenter;
     }
 
-    @Override
-    public void setManager(CommandManager cm) {
-        this.cm=cm;
-    }
 
     @Override
     public void windowOpened(WindowEvent e) {
@@ -35,7 +32,7 @@ public class MainWindowListener implements WindowListener, CommandCreator {
 
     @Override
     public void windowClosed(WindowEvent e) {
-        cm.add(new QuitCommand(e.getWindow())); //on closing the window, quit the application
+        presenter.close(); //on closing the window, quit the application
 
     }
 

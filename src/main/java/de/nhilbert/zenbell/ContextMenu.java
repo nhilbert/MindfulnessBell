@@ -1,5 +1,8 @@
 package de.nhilbert.zenbell;
 
+import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
+
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JMenuItem;
@@ -18,6 +21,8 @@ public class ContextMenu extends JPopupMenu {
 	JMenuItem BackgroundItem;
 	JMenuItem CloseItem;
 	JMenuItem InfoItem;
+
+    MainPresenter myPresenter;
 	
 	/**
 	 * 
@@ -27,7 +32,8 @@ public class ContextMenu extends JPopupMenu {
 	/**
 	 * The public constructor. Creates the menu structure.
 	 */
-    public ContextMenu(){
+    public ContextMenu(MainPresenter myPresenter){
+        this.myPresenter=myPresenter;
     	BackgroundItem = new JMenuItem("Change Background...");
     	add(BackgroundItem);
         SettingsItem = new JMenuItem("Settings...");
@@ -48,14 +54,31 @@ public class ContextMenu extends JPopupMenu {
      * @param al
      */
 	public void addActionListener(ActionListener al) {
-		SettingsItem.addActionListener(al);
-		BackgroundItem.addActionListener(al);
-		CloseItem.addActionListener(al);
-		InfoItem.addActionListener(al);
+		SettingsItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPresenter.showSettings();
+            }
+        });
+		BackgroundItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPresenter.changeBackground();
+            }
+        });
+		CloseItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPresenter.showInfo();
+            }
+        });
+		InfoItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                myPresenter.close();
+            }
+        });
 	}	
-	
-	public void addCloseListener(ActionListener al){
-		CloseItem.addActionListener(al);
-	}
+
 
 }

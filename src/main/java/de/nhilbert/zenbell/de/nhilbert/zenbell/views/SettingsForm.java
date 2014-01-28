@@ -1,7 +1,7 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.Presenter;
+import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.WindowProperties;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.commands.SaveSettingsCommand;
 
@@ -28,7 +28,7 @@ public class SettingsForm extends JFrame {
     private JButton okButton;
     private JLabel imageLabel;
     private CommandManager myCommandManager;
-    private Presenter mySettingsPresenter;
+    private MainPresenter mySettingsPresenter;
     private SettingsForm MasterFrameRef;
 
     public SettingsForm() {

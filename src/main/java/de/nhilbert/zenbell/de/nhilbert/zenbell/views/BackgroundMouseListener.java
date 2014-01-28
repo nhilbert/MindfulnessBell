@@ -1,37 +1,37 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.commands.RingBellCommand;
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.commands.ShowContextMenuCommand;
+import de.nhilbert.zenbell.ContextMenu;
+import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /**
  * Created by norman.hilbert on 27.01.14.
+ * Listens to mouse activities on the background image
  */
-public class BackgroundMouseListener implements MouseListener, CommandCreator {
+public class BackgroundMouseListener implements MouseListener {
 
-    private CommandManager myCommandManager;
+    private MainPresenter myPresenter;
 
-    public BackgroundMouseListener(CommandManager cm) {
-        this.myCommandManager = cm;
+    public BackgroundMouseListener(MainPresenter myPresenter){
+        this.myPresenter=myPresenter;
     }
 
-    @Override
-    public void setManager(CommandManager cm) {
-        this.myCommandManager = cm;
-    }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        myCommandManager.add(new RingBellCommand(myCommandManager));
+        myPresenter.ring();
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
         //on right click show popup
-        if (e.isPopupTrigger()) myCommandManager.add(new ShowContextMenuCommand(e.getComponent(),e.getX(),e.getY()));
+        if (e.isPopupTrigger())
+        {
+            ContextMenu myContextMenu= new ContextMenu(myPresenter);
+            myContextMenu.show(e.getComponent(),e.getX(),e.getY());
+        }
     }
 
     @Override
