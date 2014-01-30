@@ -1,9 +1,6 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
-import de.nhilbert.zenbell.ContextMenu;
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.CommandManager;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
-import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.WindowProperties;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

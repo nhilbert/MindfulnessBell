@@ -1,6 +1,5 @@
 package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
-import de.nhilbert.zenbell.ContextMenu;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
 
 import java.awt.event.MouseEvent;

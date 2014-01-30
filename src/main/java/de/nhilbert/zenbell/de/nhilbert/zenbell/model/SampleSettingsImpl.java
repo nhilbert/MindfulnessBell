@@ -4,13 +4,20 @@ package de.nhilbert.zenbell.de.nhilbert.zenbell.model;
  * Created by norman.hilbert on 27.01.14.
  */
 public class SampleSettingsImpl implements Settings{
+
+    private String backgroundImagePath=   "resources\\buddha.png";
+    private String wavFilePath="resources\\bell.wav";
+    private Boolean muted;
+    private int seconds=0;
+    private int minutes=15;
+
     @Override
     public String getBackgroundImage() {
-        return "resources\\buddha.png";
+        return backgroundImagePath;
     }
 
     public String getWavFile(){
-        return "resources\\bell.wav";
+        return wavFilePath;
     }
 
     @Override
@@ -20,42 +27,44 @@ public class SampleSettingsImpl implements Settings{
 
     @Override
     public Boolean isMuted() {
-        return false;
+        return muted;
     }
 
     @Override
     public Integer getPeriodSec() {
-        return 10;
+        return seconds;
     }
 
     @Override
     public Integer getPeriodMin() {
-        return 0;
+        return minutes;
     }
 
     @Override
     public void setBackgroundImage(String backgroundImage) {
+        backgroundImagePath=backgroundImage;
 
     }
 
     @Override
     public void setPeriodMin(Integer periodMin) {
-
+        minutes=periodMin;
     }
 
     @Override
     public void setPeriodSec(Integer periodSec) {
+        periodSec=periodSec-(int)periodSec/60;
 
     }
 
     @Override
     public void Mute() {
-
+        muted=true;
     }
 
     @Override
     public void Unmute() {
-
+        muted=false;
     }
 
     @Override

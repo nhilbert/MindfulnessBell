@@ -11,4 +11,7 @@ public interface Ringable {
      * This provides the action that is supposed to be executed by any bell.
      */
     public void ring();
+    public Boolean isMutable();
+    public void mute();
+    public void unMute();
 }

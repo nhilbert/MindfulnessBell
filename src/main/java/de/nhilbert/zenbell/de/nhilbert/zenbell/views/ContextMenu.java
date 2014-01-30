@@ -1,4 +1,4 @@
-package de.nhilbert.zenbell;
+package de.nhilbert.zenbell.de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.de.nhilbert.zenbell.presentation.MainPresenter;
 

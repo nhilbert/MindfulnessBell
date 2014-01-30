@@ -10,4 +10,20 @@ public class ConsoleBell implements Ringable {
     public void ring() {
         System.out.println("Hello World!");
     }
+
+
+    @Override
+    public Boolean isMutable() {
+        return false; // not effected by mute
+    }
+
+    @Override
+    public void mute() {
+
+    }
+
+    @Override
+    public void unMute() {
+
+    }
 }
