@@ -18,32 +18,27 @@ public class MainPresenterImpl implements MainPresenter{
 
 
 
-    @Override
-    public Object getProperty(int PropertyID) {
-        switch(PropertyID){
-            case WindowProperties.BGIMAGE:
-                return mySettings.getBackgroundImage();
-            case WindowProperties.TIMELEFTSEC:
-                return "15";
-            case WindowProperties.TIMELEFTMIN:
-                return "15";
-            case WindowProperties.TIMELEFTHRS:
-                return "15";
-            case WindowProperties.MUTED:
-                return false;
-            case WindowProperties.NOTIFIER:
-                return true;
-            default:
-                return null;
-        }
 
+
+    @Override
+    public Integer timeLeftSeconds() {
+        return myBellMaster.SecondsLeft()-timeLeftMinutes();
     }
 
     @Override
-    public void setProperty(int PropertyID, Object value) {
-
+    public Integer timeLeftMinutes() {
+        return myBellMaster.SecondsLeft()/60;
     }
 
+    @Override
+    public Boolean IsMuted() {
+        return false;
+    }
+
+    @Override
+    public String getBackgroundImagePath() {
+        return null;
+    }
 
     @Override
     public void registerView(View v) {
@@ -55,10 +50,7 @@ public class MainPresenterImpl implements MainPresenter{
 
     }
 
-    @Override
-    public void save() {
 
-    }
 
     @Override
     public void ring(){

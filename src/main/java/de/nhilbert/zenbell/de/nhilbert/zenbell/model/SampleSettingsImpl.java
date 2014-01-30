@@ -69,7 +69,7 @@ public class SampleSettingsImpl implements Settings{
     }
 
     @Override
-    public long getPeriod() {
-        return getPeriodMin()*60*1000+getPeriodSec()*1000;
+    public Integer getPeriod() {
+        return getPeriodMin()*60+getPeriodSec();
     }
 }

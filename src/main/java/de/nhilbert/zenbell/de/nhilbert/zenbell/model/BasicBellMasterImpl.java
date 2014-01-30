@@ -12,6 +12,8 @@ public class BasicBellMasterImpl implements BellMaster {
     private Timer myTimer;
     private Settings mySettings;
     private Integer period;
+    private Integer TimeLeft;
+
 
     private Collection<Ringable> myBells;
 
@@ -43,17 +45,28 @@ public class BasicBellMasterImpl implements BellMaster {
 
     @Override
     public void start() {
+        period=mySettings.getPeriod(); //set Period (in case it changed)
+        TimeLeft=period;
         myTimer.schedule(new TimerTask() {
             @Override
             public void run() {
-                ring();
+                TimeLeft--;   //reduce TimeLeft by one
+                if(TimeLeft<=0){   //if no time left, ring bell and reset time left.
+                    TimeLeft=period;
+                    ring();
+                }
             }
-        }, 0, mySettings.getPeriod());
+        }, 0, 1000);  //tick every second = 1000 millisecs
     }
 
     @Override
     public void stop() {
         myTimer.cancel();
+    }
+
+    @Override
+    public int SecondsLeft() {
+        return TimeLeft;
     }
 
 }

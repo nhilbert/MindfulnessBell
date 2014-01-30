@@ -25,7 +25,7 @@ public class BasicMainWindow extends JFrame implements View {
         label = new JLabel();
         this.getContentPane().add(label);
         try{
-            updateBackgroundImage((String) myMainPresenter.getProperty(WindowProperties.BGIMAGE)); //get path to BGImage
+            updateBackgroundImage(myMainPresenter.getBackgroundImagePath()); //get path to BGImage
         }
         catch(Exception e){
             //well, image loading didn't work, write some text instead

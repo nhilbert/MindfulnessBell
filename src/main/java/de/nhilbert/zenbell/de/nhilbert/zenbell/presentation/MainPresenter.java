@@ -8,11 +8,16 @@ import de.nhilbert.zenbell.de.nhilbert.zenbell.views.View;
  */
 public interface MainPresenter
 {
-    Object getProperty(int PropertyID);
-    void setProperty(int PropertyID, Object value);
+    Integer timeLeftSeconds();
+    Integer timeLeftMinutes();
+
+    Boolean IsMuted();
+
+    String getBackgroundImagePath();
+
+
     void registerView(View v);
     void load();
-    void save();
 
     void ring();
 

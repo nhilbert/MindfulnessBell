@@ -11,4 +11,6 @@ public interface BellMaster {
     void ring();
     void start();
     void stop();
+
+    int SecondsLeft();
 }

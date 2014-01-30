@@ -30,5 +30,5 @@ public interface Settings {
 
     void disableNotification();
 
-    long getPeriod();
+    Integer getPeriod();
 }
