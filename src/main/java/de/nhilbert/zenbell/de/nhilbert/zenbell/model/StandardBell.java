@@ -43,7 +43,6 @@ public class StandardBell implements Ringable {
     @Override
     public Boolean isMutable() {
         return true;
-
     }
 
     @Override

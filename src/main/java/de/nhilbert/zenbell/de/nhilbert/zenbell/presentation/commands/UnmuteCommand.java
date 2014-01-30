@@ -19,8 +19,9 @@ public class UnmuteCommand implements Command {
 
     @Override
     public boolean execute() {
-        for(Ringable bell:myBells ){
+        for(Ringable bell:ringers){
             bell.unMute();
         }
+        return true;
     }
 }
