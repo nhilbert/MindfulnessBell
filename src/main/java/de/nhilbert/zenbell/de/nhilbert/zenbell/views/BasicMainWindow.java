@@ -6,18 +6,23 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by norman.hilbert on 27.01.14.
  */
+@Service
 public class BasicMainWindow extends JFrame implements View {
 
 
     private JLabel label;
     private MainPresenter myMainPresenter;
 
-    public void BasicMainWindow()
+    @Autowired
+    public void BasicMainWindow(MainPresenter mp)
     {
+        myMainPresenter=mp; //add the presenter
         //Add the background label and set it to the background image
         label = new JLabel();
         this.getContentPane().add(label);

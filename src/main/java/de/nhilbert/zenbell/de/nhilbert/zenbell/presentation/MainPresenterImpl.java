@@ -5,10 +5,12 @@ import de.nhilbert.zenbell.de.nhilbert.zenbell.model.Settings;
 import de.nhilbert.zenbell.de.nhilbert.zenbell.views.View;
 
 import java.util.Collection;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by norman.hilbert on 27.01.14.
  */
+@Service
 public class MainPresenterImpl implements MainPresenter{
 
     Collection<View> ViewList;
