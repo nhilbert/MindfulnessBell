@@ -1,15 +1,23 @@
 package de.nhilbert.zenbell.model;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by norman.hilbert on 27.01.14.
  */
+@Service
 public class SampleSettingsImpl implements Settings{
 
-    private String backgroundImagePath=   "resources\\buddha.png";
-    private String wavFilePath="resources\\bell.wav";
-    private Boolean muted;
+    private String backgroundImagePath=   "resources/buddha.png";
+    private String wavFilePath="resources/bell.wav";
+    private Boolean muted=false;
     private int seconds=0;
-    private int minutes=15;
+    private int minutes=1;
+
+    public SampleSettingsImpl() {
+        System.out.println("Creating Settings Object");
+    }
+
 
     @Override
     public String getBackgroundImage() {

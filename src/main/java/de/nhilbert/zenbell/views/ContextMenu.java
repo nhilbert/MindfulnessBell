@@ -2,6 +2,7 @@ package de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.presentation.MainPresenter;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -75,7 +76,7 @@ public class ContextMenu extends JPopupMenu {
 		InfoItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                myPresenter.close();
+                myPresenter.close((Window)e.getSource());
             }
         });
 	}	

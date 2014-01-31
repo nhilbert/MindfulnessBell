@@ -54,4 +54,9 @@ public class StandardBell implements Ringable {
     public void unMute() {
         muted=false;
     }
+
+    @Override
+    public String toString() {
+        return "StandardBell";
+    }
 }

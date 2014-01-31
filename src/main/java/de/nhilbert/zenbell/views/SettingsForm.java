@@ -2,9 +2,12 @@ package de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.presentation.SettingsPresenter;
 import de.nhilbert.zenbell.presentation.WindowProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -13,6 +16,7 @@ import java.io.IOException;
 /**
  * Created by norman.hilbert on 27.01.14.
  */
+
 public class SettingsForm extends JFrame {
     private JTextArea notificationTextArea;
     private JCheckBox notificationCheckBox;
@@ -25,11 +29,13 @@ public class SettingsForm extends JFrame {
     private JButton cancelButton;
     private JButton okButton;
     private JLabel imageLabel;
+
     private SettingsPresenter mySettingsPresenter;
     private SettingsForm MasterFrameRef;
 
-    public SettingsForm() {
+    public SettingsForm(SettingsPresenter myPresenter) {
 
+        mySettingsPresenter=myPresenter;
         //Set up the settings form from the presenter
         notificationCheckBox.setSelected((Boolean) mySettingsPresenter.getProperty(WindowProperties.NOTIFIER));
         minuteSpinner.setValue((Integer) mySettingsPresenter.getProperty(WindowProperties.PERIODMIN));

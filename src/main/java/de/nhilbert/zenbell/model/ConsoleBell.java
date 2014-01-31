@@ -26,4 +26,9 @@ public class ConsoleBell implements Ringable {
     public void unMute() {
 
     }
+
+    @Override
+    public String toString() {
+        return "StandardBell";
+    }
 }

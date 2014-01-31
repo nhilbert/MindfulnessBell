@@ -2,10 +2,12 @@ package de.nhilbert.zenbell.presentation;
 
 import de.nhilbert.zenbell.model.Settings;
 import de.nhilbert.zenbell.views.View;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by norman.hilbert on 27.01.14.
  */
+@Service
 public class SettingsPresenterImpl implements SettingsPresenter {
 
     private String backgroundImage;

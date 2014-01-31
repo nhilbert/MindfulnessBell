@@ -30,7 +30,7 @@ public class MainWindowListener implements WindowListener {
 
     @Override
     public void windowClosed(WindowEvent e) {
-        presenter.close(); //on closing the window, quit the application
+        presenter.close(e.getWindow()); //on closing the window, quit the application
 
     }
 

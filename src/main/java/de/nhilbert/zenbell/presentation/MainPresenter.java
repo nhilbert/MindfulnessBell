@@ -2,6 +2,8 @@ package de.nhilbert.zenbell.presentation;
 
 import de.nhilbert.zenbell.views.View;
 
+import java.awt.*;
+
 /**
  * Created by norman.hilbert on 27.01.14.
  * This is the interface for a standard presenter, which makes data available to a view
@@ -21,7 +23,7 @@ public interface MainPresenter
 
     void ring();
 
-    void close();
+    void close(Window source);
 
     void changeBackground();
 

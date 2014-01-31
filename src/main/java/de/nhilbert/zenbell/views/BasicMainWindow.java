@@ -12,15 +12,13 @@ import org.springframework.stereotype.Service;
 /**
  * Created by norman.hilbert on 27.01.14.
  */
-@Service
 public class BasicMainWindow extends JFrame implements View {
 
 
     private JLabel label;
     private MainPresenter myMainPresenter;
 
-    @Autowired
-    public void BasicMainWindow(MainPresenter mp)
+    public BasicMainWindow(MainPresenter mp)
     {
         myMainPresenter=mp; //add the presenter
         //Add the background label and set it to the background image

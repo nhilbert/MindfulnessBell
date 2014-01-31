@@ -11,5 +11,6 @@
 
     <context:component-scan base-package="de.nhilbert.zenbell.presentation" />
     <context:component-scan base-package="de.nhilbert.zenbell.views" />
+    <context:component-scan base-package="de.nhilbert.zenbell.model" />
 
 </beans>

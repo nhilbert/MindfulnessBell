@@ -1,5 +1,8 @@
 package de.nhilbert.zenbell;
 
+import de.nhilbert.zenbell.model.*;
+import de.nhilbert.zenbell.presentation.MainPresenter;
+import de.nhilbert.zenbell.presentation.MainPresenterImpl;
 import de.nhilbert.zenbell.views.BasicMainWindow;
 
 import org.springframework.beans.factory.BeanFactory;
@@ -15,11 +18,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SimpleZenbellApp {
 
     public static void main(String [] args){
-
-        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/beans.xml");
-        BeanFactory factory = context;
-
-        BasicMainWindow MyMainWindow=new BasicMainWindow();
+        Settings MySettings=new SampleSettingsImpl();
+        BellMaster myBellMaster=new BasicBellMasterImpl(MySettings);
+        myBellMaster.registerBell(new ConsoleBell());
+        try{
+            myBellMaster.registerBell(new StandardBell("resources/bell.wav"));
+        }
+        catch(Exception e){
+            System.out.println("File not found :-(");
+        }
+        MainPresenter MyMainPresenter=new MainPresenterImpl(myBellMaster, MySettings);
+        BasicMainWindow MyMainWindow = new BasicMainWindow(MyMainPresenter);
         MyMainWindow.showView();
 
     }
