@@ -20,6 +20,7 @@ public class BasicMainWindow extends JFrame implements View {
 
     public BasicMainWindow(MainPresenter mp)
     {
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         myMainPresenter=mp; //add the presenter
         //Add the background label and set it to the background image
         label = new JLabel();
@@ -31,6 +32,7 @@ public class BasicMainWindow extends JFrame implements View {
             //well, image loading didn't work, write some text instead
             label.setText("Image not found!");
         }
+        this.pack();
         label.addMouseListener(new BackgroundMouseListener(myMainPresenter)); //add a Background MouseListener
         this.addWindowListener(new MainWindowListener(myMainPresenter)); //add a Window-Listener to this window
     }

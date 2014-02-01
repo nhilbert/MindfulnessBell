@@ -50,7 +50,7 @@ public class MainPresenterImpl implements MainPresenter{
 
     @Override
     public String getBackgroundImagePath() {
-        return null;
+        return mySettings.getBackgroundImage();
     }
 
     @Override
@@ -72,10 +72,9 @@ public class MainPresenterImpl implements MainPresenter{
     }
 
     @Override
-    public void close(Window source) {
+    public void close() {
         System.out.println("Shutdown!");
-        WindowEvent wev = new WindowEvent(source, WindowEvent.WINDOW_CLOSING);
-        Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
+        myBellMaster.stop();
     }
 
     @Override

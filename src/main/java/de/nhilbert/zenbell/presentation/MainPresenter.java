@@ -23,7 +23,7 @@ public interface MainPresenter
 
     void ring();
 
-    void close(Window source);
+    void close();
 
     void changeBackground();
 

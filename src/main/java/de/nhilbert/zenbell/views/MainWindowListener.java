@@ -25,12 +25,13 @@ public class MainWindowListener implements WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-
+        System.out.println("Window Closing");
     }
 
     @Override
     public void windowClosed(WindowEvent e) {
-        presenter.close(e.getWindow()); //on closing the window, quit the application
+        System.out.println("Window Closed");
+        presenter.close();
 
     }
 

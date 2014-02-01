@@ -20,14 +20,18 @@ public class BackgroundMouseListener implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        myPresenter.ring();
+        if(e.getButton()==MouseEvent.BUTTON1){
+            System.out.println("Left Button Clicked");
+            myPresenter.ring();
+        }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
         //on right click show popup
-        if (e.isPopupTrigger())
+        if (e.getButton()==MouseEvent.BUTTON3)
         {
+            System.out.println("Right Pressed");
             ContextMenu myContextMenu= new ContextMenu(myPresenter);
             myContextMenu.show(e.getComponent(),e.getX(),e.getY());
         }

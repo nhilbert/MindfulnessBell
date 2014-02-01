@@ -73,12 +73,7 @@ public class ContextMenu extends JPopupMenu {
                 myPresenter.showInfo();
             }
         });
-		InfoItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                myPresenter.close((Window)e.getSource());
-            }
-        });
+
 	}	
 
 
