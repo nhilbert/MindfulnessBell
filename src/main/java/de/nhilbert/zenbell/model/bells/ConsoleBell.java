@@ -1,5 +1,7 @@
-package de.nhilbert.zenbell.model;
+package de.nhilbert.zenbell.model.bells;
 
+
+import de.nhilbert.zenbell.model.Ringable;
 
 /**
  * Created by norman.hilbert on 27.01.14.

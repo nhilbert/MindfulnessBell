@@ -1,4 +1,6 @@
-package de.nhilbert.zenbell.model;
+package de.nhilbert.zenbell.model.bells;
+
+import de.nhilbert.zenbell.model.Ringable;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -20,7 +22,7 @@ public class StandardBell implements Ringable {
     public StandardBell(String SoundfilePath) throws FileNotFoundException
     {
         soundfile=new File(SoundfilePath);
-        if(soundfile.canRead()==false) throw new FileNotFoundException();
+        if(!soundfile.canRead()) throw new FileNotFoundException();
     }
 
     @Override

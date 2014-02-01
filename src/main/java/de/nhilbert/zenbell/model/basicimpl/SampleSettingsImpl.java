@@ -1,12 +1,13 @@
-package de.nhilbert.zenbell.model;
+package de.nhilbert.zenbell.model.basicimpl;
 
+import de.nhilbert.zenbell.model.Settings;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by norman.hilbert on 27.01.14.
  */
 @Service
-public class SampleSettingsImpl implements Settings{
+public class SampleSettingsImpl implements Settings {
 
     private String backgroundImagePath=   "resources/buddha.png";
     private String wavFilePath="resources/bell.wav";

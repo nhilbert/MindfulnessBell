@@ -1,5 +1,8 @@
-package de.nhilbert.zenbell.model;
+package de.nhilbert.zenbell.model.basicimpl;
 
+import de.nhilbert.zenbell.model.BellMaster;
+import de.nhilbert.zenbell.model.Ringable;
+import de.nhilbert.zenbell.model.Settings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
