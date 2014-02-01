@@ -1,7 +1,6 @@
 package de.nhilbert.zenbell.views;
 
 import de.nhilbert.zenbell.presentation.MainPresenter;
-
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -26,7 +25,7 @@ public class BackgroundMouseListener implements MouseListener {
 
     /***
      * When the mouse is clicked, if it is the left button, ring the bell
-     * @param e
+     * @param e the Mouse Event triggered
      */
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -38,7 +37,7 @@ public class BackgroundMouseListener implements MouseListener {
 
     /**
      * Whenever the right button is pressed, show a context menu, allow to edit settings etc.
-     * @param e
+     * @param e the Mouse Event triggered
      */
     @Override
     public void mousePressed(MouseEvent e) {
@@ -53,7 +52,7 @@ public class BackgroundMouseListener implements MouseListener {
 
     /**
      * No action
-     * @param e
+     * @param e the Mouse Event triggered
      */
     @Override
     public void mouseReleased(MouseEvent e) {
@@ -62,7 +61,7 @@ public class BackgroundMouseListener implements MouseListener {
 
     /**
      * No action
-     * @param e
+     * @param e the Mouse Event triggered
      */
     @Override
     public void mouseEntered(MouseEvent e) {
@@ -71,7 +70,7 @@ public class BackgroundMouseListener implements MouseListener {
 
     /**
      * No action
-     * @param e
+     * @param e the Mouse Event triggered
      */
     @Override
     public void mouseExited(MouseEvent e) {

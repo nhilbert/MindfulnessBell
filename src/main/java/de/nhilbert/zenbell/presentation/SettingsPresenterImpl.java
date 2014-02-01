@@ -1,7 +1,6 @@
 package de.nhilbert.zenbell.presentation;
 
 import de.nhilbert.zenbell.model.Settings;
-import de.nhilbert.zenbell.views.View;
 import org.springframework.stereotype.Service;
 
 /**
@@ -85,8 +84,5 @@ public class SettingsPresenterImpl implements SettingsPresenter {
         }
     }
 
-    @Override
-    public void registerView(View v) {
 
-    }
 }

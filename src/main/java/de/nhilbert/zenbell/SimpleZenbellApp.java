@@ -29,7 +29,7 @@ public class SimpleZenbellApp {
         }
         MainPresenter MyMainPresenter=new MainPresenterImpl(myBellMaster, MySettings);
         BasicMainWindow MyMainWindow = new BasicMainWindow(MyMainPresenter);
-        MyMainWindow.showView();
+        MyMainWindow.setVisible(true);
 
     }
 }

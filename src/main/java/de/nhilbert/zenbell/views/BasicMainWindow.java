@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by norman.hilbert on 27.01.14.
  */
-public class BasicMainWindow extends JFrame implements View {
+public class BasicMainWindow extends JFrame {
 
 
     private JLabel label;
@@ -36,22 +36,6 @@ public class BasicMainWindow extends JFrame implements View {
         label.addMouseListener(new BackgroundMouseListener(myMainPresenter)); //add a Background MouseListener
         this.addWindowListener(new MainWindowListener(myMainPresenter)); //add a Window-Listener to this window
     }
-
-    @Override
-    public void showView() {
-        this.setVisible(true);
-    }
-
-    @Override
-    public void hideView() {
-        this.setVisible(false);
-    }
-
-    @Override
-    public void updateView() {
-
-    }
-
 
     /**
      * Loads a new background image for the window. It is created as a label. The windows BellMaster is set up as a MouseListener for events on the background.

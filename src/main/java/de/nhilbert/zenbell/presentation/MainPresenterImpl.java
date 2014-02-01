@@ -2,18 +2,11 @@ package de.nhilbert.zenbell.presentation;
 
 import de.nhilbert.zenbell.model.BellMaster;
 import de.nhilbert.zenbell.model.Settings;
-import de.nhilbert.zenbell.views.BasicMainWindow;
 import de.nhilbert.zenbell.views.SettingsForm;
-import de.nhilbert.zenbell.views.View;
 
-import java.awt.*;
-import java.awt.event.WindowEvent;
 import java.util.Collection;
 
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
 /**
@@ -22,7 +15,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class MainPresenterImpl implements MainPresenter{
 
-    Collection<View> ViewList;
     BellMaster myBellMaster;
     Settings mySettings;
 
@@ -53,10 +45,6 @@ public class MainPresenterImpl implements MainPresenter{
         return mySettings.getBackgroundImage();
     }
 
-    @Override
-    public void registerView(View v) {
-        ViewList.add(v);
-    }
 
     @Override
     public void load() {
@@ -89,6 +77,7 @@ public class MainPresenterImpl implements MainPresenter{
 
     @Override
     public void showSettings() {
+        System.out.println("Trying to show settings dialog");
         SettingsPresenter mySPresenter=new SettingsPresenterImpl();
         SettingsForm mySettingsForm=new SettingsForm(mySPresenter);
 
